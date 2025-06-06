@@ -1,1 +1,165 @@
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Tech Deals - Affiliate Product Listings</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 20px;
+      background: #f4f4f4;
+      color: #333;
+    }
+    h1 {
+      text-align: center;
+      margin-bottom: 30px;
+      color: #1a73e8;
+    }
+    .product-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: center;
+    }
+    .product-card {
+      background: white;
+      border-radius: 8px;
+      width: 280px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 15px;
+      transition: box-shadow 0.3s ease;
+    }
+    .product-card:hover {
+      box-shadow: 0 6px 15px rgba(0,0,0,0.2);
+    }
+    .product-card img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 6px;
+      margin-bottom: 15px;
+    }
+    .product-name {
+      font-weight: 700;
+      font-size: 1.1em;
+      margin-bottom: 8px;
+      text-align: center;
+      min-height: 48px; /* Keep height consistent */
+    }
+    .product-price {
+      color: #2a9d8f;
+      font-size: 1.2em;
+      margin-bottom: 12px;
+      font-weight: bold;
+    }
+    .buy-link {
+      background: #e76f51;
+      color: white;
+      padding: 10px 16px;
+      border-radius: 5px;
+      text-decoration: none;
+      font-weight: bold;
+      width: 100%;
+      text-align: center;
+      transition: background 0.3s ease;
+    }
+    .buy-link:hover {
+      background: #d35400;
+    }
+
+    /* Ad container styling */
+    .ad-container {
+      margin: 40px auto;
+      text-align: center;
+      background: white;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      max-width: 728px;
+      min-height: 90px; /* typical leaderboard ad size */
+    }
+
+    /* Responsive */
+    @media (max-width: 600px) {
+      .product-card {
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Tech Deals - Top Affiliate Products</h1>
+
+  <div class="product-list" id="product-list">
+    <!-- Products will be injected here -->
+  </div>
+
+  <!-- Adsense Ad Space -->
+  <div class="ad-container" id="ad-container">
+    <!-- Replace this below div with your Google AdSense code -->
+    <ins class="adsbygoogle"
+         style="display:inline-block;width:728px;height:90px"
+         data-ad-client="ca-pub-XXXXXXXXXXXXXXXX"
+         data-ad-slot="YYYYYYYYYY"></ins>
+    <script>
+         (adsbygoogle = window.adsbygoogle || []).push({});
+    </script>
+  </div>
+
+  <script>
+    const products = [
+      {
+        name: "Apple AirPods Pro 2",
+        price: "₹24,900",
+        image: "https://m.media-amazon.com/images/I/71zny7BTRlL._SL1500_.jpg",
+        link: "https://www.amazon.in/dp/B09JQMJHXY?tag=youraffid"
+      },
+      {
+        name: "Samsung Galaxy S23 Ultra",
+        price: "₹1,09,999",
+        image: "https://m.media-amazon.com/images/I/91hGOPqCyYL._SL1500_.jpg",
+        link: "https://www.amazon.in/dp/B0BG6W72YS?tag=youraffid"
+      },
+      {
+        name: "Sony WH-1000XM5 Wireless Headphones",
+        price: "₹29,990",
+        image: "https://m.media-amazon.com/images/I/71o8Q5XJS5L._SL1500_.jpg",
+        link: "https://www.amazon.in/dp/B09NQDG7SN?tag=youraffid"
+      },
+      {
+        name: "Logitech MX Master 3 Wireless Mouse",
+        price: "₹8,999",
+        image: "https://m.media-amazon.com/images/I/61FuZ9k+88L._SL1500_.jpg",
+        link: "https://www.amazon.in/dp/B07S395RWD?tag=youraffid"
+      }
+    ];
+
+    const productList = document.getElementById("product-list");
+
+    products.forEach(product => {
+      const card = document.createElement("div");
+      card.className = "product-card";
+
+      card.innerHTML = `
+        <img src="${product.image}" alt="${product.name}" loading="lazy" />
+        <div class="product-name">${product.name}</div>
+        <div class="product-price">${product.price}</div>
+        <a href="${product.link}" target="_blank" rel="noopener noreferrer" class="buy-link">Buy Now</a>
+      `;
+
+      productList.appendChild(card);
+    });
+  </script>
+
+  <!-- Google AdSense Script -->
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+
+</body>
+</html>
