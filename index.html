@@ -49,7 +49,7 @@
       font-size: 1.1em;
       margin-bottom: 8px;
       text-align: center;
-      min-height: 48px; /* Keep height consistent */
+      min-height: 48px;
     }
     .product-price {
       color: #2a9d8f;
@@ -71,8 +71,6 @@
     .buy-link:hover {
       background: #d35400;
     }
-
-    /* Ad container styling */
     .ad-container {
       margin: 40px auto;
       text-align: center;
@@ -81,10 +79,8 @@
       border-radius: 8px;
       box-shadow: 0 2px 8px rgba(0,0,0,0.1);
       max-width: 728px;
-      min-height: 90px; /* typical leaderboard ad size */
+      min-height: 90px;
     }
-
-    /* Responsive */
     @media (max-width: 600px) {
       .product-card {
         width: 100%;
@@ -96,13 +92,10 @@
 
   <h1>Tech Deals - Top Affiliate Products</h1>
 
-  <div class="product-list" id="product-list">
-    <!-- Products will be injected here -->
-  </div>
+  <div class="product-list" id="product-list"></div>
 
-  <!-- Adsense Ad Space -->
   <div class="ad-container" id="ad-container">
-    <!-- Replace this below div with your Google AdSense code -->
+    <!-- Replace below with your real AdSense code -->
     <ins class="adsbygoogle"
          style="display:inline-block;width:728px;height:90px"
          data-ad-client="ca-pub-XXXXXXXXXXXXXXXX"
@@ -114,51 +107,47 @@
 
   <script>
     const products = [
-      {
-        name: "Apple AirPods Pro 2",
-        price: "₹24,900",
-        image: "https://m.media-amazon.com/images/I/71zny7BTRlL._SL1500_.jpg",
-        link: "https://www.amazon.in/dp/B09JQMJHXY?tag=youraffid"
-      },
-      {
-        name: "Samsung Galaxy S23 Ultra",
-        price: "₹1,09,999",
-        image: "https://m.media-amazon.com/images/I/91hGOPqCyYL._SL1500_.jpg",
-        link: "https://www.amazon.in/dp/B0BG6W72YS?tag=youraffid"
-      },
-      {
-        name: "Sony WH-1000XM5 Wireless Headphones",
-        price: "₹29,990",
-        image: "https://m.media-amazon.com/images/I/71o8Q5XJS5L._SL1500_.jpg",
-        link: "https://www.amazon.in/dp/B09NQDG7SN?tag=youraffid"
-      },
-      {
-        name: "Logitech MX Master 3 Wireless Mouse",
-        price: "₹8,999",
-        image: "https://m.media-amazon.com/images/I/61FuZ9k+88L._SL1500_.jpg",
-        link: "https://www.amazon.in/dp/B07S395RWD?tag=youraffid"
-      }
-    ];
-
-    const productList = document.getElementById("product-list");
-
-    products.forEach(product => {
-      const card = document.createElement("div");
-      card.className = "product-card";
-
-      card.innerHTML = `
-        <img src="${product.image}" alt="${product.name}" loading="lazy" />
-        <div class="product-name">${product.name}</div>
-        <div class="product-price">${product.price}</div>
-        <a href="${product.link}" target="_blank" rel="noopener noreferrer" class="buy-link">Buy Now</a>
-      `;
-
-      productList.appendChild(card);
-    });
-  </script>
-
-  <!-- Google AdSense Script -->
-  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-
-</body>
-</html>
+      {name: "Apple AirPods Pro 2", price: "₹24,900", image: "https://m.media-amazon.com/images/I/71zny7BTRlL._SL1500_.jpg", link: "https://www.amazon.in/dp/B09JQMJHXY?tag=youraffid-21"},
+      {name: "Samsung Galaxy S23 Ultra", price: "₹1,09,999", image: "https://m.media-amazon.com/images/I/91hGOPqCyYL._SL1500_.jpg", link: "https://www.amazon.in/dp/B0BG6W72YS?tag=youraffid-21"},
+      {name: "Sony WH-1000XM5 Wireless Headphones", price: "₹29,990", image: "https://m.media-amazon.com/images/I/71o8Q5XJS5L._SL1500_.jpg", link: "https://www.amazon.in/dp/B09NQDG7SN?tag=youraffid-21"},
+      {name: "Logitech MX Master 3 Wireless Mouse", price: "₹8,999", image: "https://m.media-amazon.com/images/I/61FuZ9k+88L._SL1500_.jpg", link: "https://www.amazon.in/dp/B07S395RWD?tag=youraffid-21"},
+      {name: "Dell Inspiron 15 3000 Laptop", price: "₹38,990", image: "https://m.media-amazon.com/images/I/71fi+bN9mwL._SL1500_.jpg", link: "https://www.amazon.in/dp/B0869TQC8V?tag=youraffid-21"},
+      {name: "Samsung 970 EVO Plus 1TB SSD", price: "₹9,499", image: "https://m.media-amazon.com/images/I/81tlq7rd6SL._SL1500_.jpg", link: "https://www.amazon.in/dp/B07MFZY2F2?tag=youraffid-21"},
+      {name: "Seagate BarraCuda 2TB HDD", price: "₹4,500", image: "https://m.media-amazon.com/images/I/81t5a5nVgrL._SL1500_.jpg", link: "https://www.amazon.in/dp/B07H2RR55Q?tag=youraffid-21"},
+      {name: "WD Blue 1TB HDD", price: "₹3,200", image: "https://m.media-amazon.com/images/I/71D5VyFqNGL._SL1500_.jpg", link: "https://www.amazon.in/dp/B07D99V2J5?tag=youraffid-21"},
+      {name: "Canon EOS 1500D DSLR Camera", price: "₹27,995", image: "https://m.media-amazon.com/images/I/81y3XogNaML._SL1500_.jpg", link: "https://www.amazon.in/dp/B06W55K9N6?tag=youraffid-21"},
+      {name: "Apple MacBook Air M2 2022", price: "₹1,19,900", image: "https://m.media-amazon.com/images/I/71TPda7cwUL._SL1500_.jpg", link: "https://www.amazon.in/dp/B0B3C1KX4M?tag=youraffid-21"},
+      {name: "Google Pixel 7 Pro", price: "₹84,999", image: "https://m.media-amazon.com/images/I/71fJ-gmR3SL._SL1500_.jpg", link: "https://www.amazon.in/dp/B0B4F7MPXH?tag=youraffid-21"},
+      {name: "ASUS ROG Strix G15 Gaming Laptop", price: "₹94,999", image: "https://m.media-amazon.com/images/I/91N-wBBRyqL._SL1500_.jpg", link: "https://www.amazon.in/dp/B099V6Z4P3?tag=youraffid-21"},
+      {name: "OnePlus 11 5G Smartphone", price: "₹56,999", image: "https://m.media-amazon.com/images/I/61FH58bH7DL._SL1500_.jpg", link: "https://www.amazon.in/dp/B0BHRQZMT9?tag=youraffid-21"},
+      {name: "Sony PlayStation 5 Console", price: "₹49,990", image: "https://m.media-amazon.com/images/I/619BkvKW35L._SL1500_.jpg", link: "https://www.amazon.in/dp/B08FC5L3RG?tag=youraffid-21"},
+      {name: "Samsung 55-inch QLED TV", price: "₹69,999", image: "https://m.media-amazon.com/images/I/81a4kCNu1oL._SL1500_.jpg", link: "https://www.amazon.in/dp/B088JJ3FZC?tag=youraffid-21"},
+      {name: "Apple iPhone 14 Pro Max", price: "₹1,29,900", image: "https://m.media-amazon.com/images/I/61tNldzXMZL._SL1500_.jpg", link: "https://www.amazon.in/dp/B0BDH3ZHK4?tag=youraffid-21"},
+      {name: "Bose QuietComfort 45 Headphones", price: "₹29,999", image: "https://m.media-amazon.com/images/I/61BsyFDZKHL._SL1500_.jpg", link: "https://www.amazon.in/dp/B09NN9GV7M?tag=youraffid-21"},
+      {name: "Microsoft Surface Pro 9", price: "₹1,04,999", image: "https://m.media-amazon.com/images/I/71T-+Qe2XyL._SL1500_.jpg", link: "https://www.amazon.in/dp/B0B3HJMCY2?tag=youraffid-21"},
+      {name: "Lenovo Legion 5 Gaming Laptop", price: "₹72,999", image: "https://m.media-amazon.com/images/I/81owBfTnshL._SL1500_.jpg", link: "https://www.amazon.in/dp/B08X67K6CF?tag=youraffid-21"},
+      {name: "JBL Flip 6 Portable Speaker", price: "₹8,999", image: "https://m.media-amazon.com/images/I/61TfEbHDjLL._SL1500_.jpg", link: "https://www.amazon.in/dp/B09TYQJ1YM?tag=youraffid-21"},
+      {name: "Acer Predator Helios 300", price: "₹1,04,999", image: "https://m.media-amazon.com/images/I/91K0%2B18oXWL._SL1500_.jpg", link: "https://www.amazon.in/dp/B07VGF8ZYZ?tag=youraffid-21"},
+      {name: "Fitbit Charge 5 Fitness Tracker", price: "₹14,999", image: "https://m.media-amazon.com/images/I/61PR8sAxBnL._SL1500_.jpg", link: "https://www.amazon.in/dp/B09BX7QRVQ?tag=youraffid-21"},
+      {name: "GoPro HERO11 Black", price: "₹49,900", image: "https://m.media-amazon.com/images/I/71HgFlD2+XL._SL1500_.jpg", link: "https://www.amazon.in/dp/B0B6WTX4C2?tag=youraffid-21"},
+      {name: "Razer DeathAdder V2 Gaming Mouse", price: "₹5,999", image: "https://m.media-amazon.com/images/I/61ZvMnLeBHL._SL1500_.jpg", link: "https://www.amazon.in/dp/B082R7G4TK?tag=youraffid-21"},
+      {name: "Anker PowerCore 20100mAh Power Bank", price: "₹3,999", image: "https://m.media-amazon.com/images/I/61Vzj71bXlL._SL1500_.jpg", link: "https://www.amazon.in/dp/B00X5RV14Y?tag=youraffid-21"},
+      {name: "Corsair K95 RGB Platinum Keyboard", price: "₹14,999", image: "https://m.media-amazon.com/images/I/81P8eQdJy3L._SL1500_.jpg", link: "https://www.amazon.in/dp/B01LZTGZBG?tag=youraffid-21"},
+      {name: "Amazon Echo Dot (4th Gen)", price: "₹3,999", image: "https://m.media-amazon.com/images/I/714Rq4k05UL._SL1000_.jpg", link: "https://www.amazon.in/dp/B07XJ8C8F5?tag=youraffid-21"},
+      {name: "Samsung Galaxy Tab S8", price: "₹59,999", image: "https://m.media-amazon.com/images/I/81mNpgoNs5L._SL1500_.jpg", link: "https://www.amazon.in/dp/B09P8S4DHT?tag=youraffid-21"},
+      {name: "WD My Passport 2TB External HDD", price: "₹5,999", image: "https://m.media-amazon.com/images/I/61gizF0mV6L._SL1500_.jpg", link: "https://www.amazon.in/dp/B07VTFN66T?tag=youraffid-21"},
+      {name: "Apple Watch Series 8", price: "₹45,900", image: "https://m.media-amazon.com/images/I/71b8gB5uTUL._SL1500_.jpg", link: "https://www.amazon.in/dp/B0B7FXF3TZ?tag=youraffid-21"},
+      {name: "Nintendo Switch Console", price: "₹29,990", image: "https://m.media-amazon.com/images/I/61-PblYntsL._SL1500_.jpg", link: "https://www.amazon.in/dp/B01NAWKYZ0?tag=youraffid-21"},
+      {name: "Logitech C920 HD Webcam", price: "₹6,999", image: "https://m.media-amazon.com/images/I/71mwRz8QFaL._SL1500_.jpg", link: "https://www.amazon.in/dp/B006JH8T3S?tag=youraffid-21"},
+      {name: "Samsung Galaxy Buds 2", price: "₹7,999", image: "https://m.media-amazon.com/images/I/61RYmx7qJPL._SL1500_.jpg", link: "https://www.amazon.in/dp/B097RK4PQG?tag=youraffid-21"},
+      {name: "Dell UltraSharp 27 Inch Monitor", price: "₹31,999", image: "https://m.media-amazon.com/images/I/71nnFReR9BL._SL1500_.jpg", link: "https://www.amazon.in/dp/B07Y5RMSGM?tag=youraffid-21"},
+      {name: "ASUS TUF Gaming F15 Laptop", price: "₹68,999", image: "https://m.media-amazon.com/images/I/81aZTtX6wgL._SL1500_.jpg", link: "https://www.amazon.in/dp/B08YN9LJK6?tag=youraffid-21"},
+      {name: "Google Nest Thermostat", price: "₹9,999", image: "https://m.media-amazon.com/images/I/41vpQZj7nOL._SL1000_.jpg", link: "https://www.amazon.in/dp/B09JDYG3ZN?tag=youraffid-21"},
+      {name: "Seagate Expansion 4TB External HDD", price: "₹7,499", image: "https://m.media-amazon.com/images/I/61a3qI1YlhL._SL1500_.jpg", link: "https://www.amazon.in/dp/B07CRG94G3?tag=youraffid-21"},
+      {name: "Sony WF-1000XM4 Wireless Earbuds", price: "₹17,990", image: "https://m.media-amazon.com/images/I/71f9GcGBwOL._SL1500_.jpg", link: "https://www.amazon.in/dp/B096B5WVLZ?tag=youraffid-21"},
+      {name: "HP Pavilion 15 Laptop", price: "₹56,990", image: "https://m.media-amazon.com/images/I/81Mzw6q-JDL._SL1500_.jpg", link: "https://www.amazon.in/dp/B08P4PXF74?tag=youraffid-21"},
+      {name: "Logitech G502 HERO Gaming Mouse", price: "₹4,999", image: "https://m.media-amazon.com/images/I/71GB8Kd68nL._SL1500_.jpg", link: "https://www.amazon.in/dp/B07GBZ4Q68?tag=youraffid-21"},
+      {name: "Roku Streaming Stick+", price: "₹4,999", image: "https://m.media-amazon.com/images/I/51vtG41dzwL._SL1000_.jpg", link: "https://www.amazon.in/dp/B075XLWML4?tag=youraffid-21"},
+      {name: "Microsoft Xbox Series S", price: "₹29,990", image: "https://m.media-amazon.com/images/I/71JG-q8dkLL._SL1500_.jpg", link: "https://www.amazon.in/dp/B08GFSZ7V6?tag=youraffid-21"},
+      {name: "Kindle Paperwhite (11th Gen)", price: "₹13,999", image: "https://m.media-amazon.com/images/I/61IMqJnjHNL._SL1000_.jpg", link: "https://www.amazon.in/dp/B07CXG6C9W?tag=youraffid-21"},
+      {name: "Anker Soundcore Liberty Air 
